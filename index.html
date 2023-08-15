@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Exploration Web App</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="#intro" id="name">
+        <h1>Explore your City</h1>
+      </a>
+      <ul>
+        <li class="nav-item">
+          <a href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+  </nav>
+  </div>
+  <p>This is basically a city exploration web application that allows users to visualize their current location on a map
+    and explore nearby points of interest. The application uses the Canvas and Bing Maps API for map display and
+    integrates geolocation to provide an interactive experience.</p>
+  <p>Time Stamp: <span id="timestamp"></span></p>
+  <p>Latitude : <span id="latitude"></span></p>
+  <p>Longitude: <span id="longitude"></span></p>
+
+  <button onclick="getLocation()" class="mybtn">Get My Location</button>
+  <br><br><br>
+
+  <div id="mapContainer">
+    <canvas id="mapCanvas" width="990" height="590"></canvas>
+    <div id="myMap"></div>
+  </div>
+
+  <!-- Footer Section Starts -->
+
+  <footer id="footer">
+
+    <div class="footline">
+      Copyright Chiranjeev Sehgal© 2023 All rights reserved.</span>
+    </div>
+
+  </footer>
+
+
+  <!-- Footer Section Ends -->
+</body>
+
+<script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?callback=loadMap" async defer></script>
+<script src="script.js"></script>
+
+</html>
